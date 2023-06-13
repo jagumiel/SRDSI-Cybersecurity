@@ -1,0 +1,323 @@
+OCSP Request Data:
+    Version: 1 (0x0)
+    Requestor List:
+        Certificate ID:
+          Hash Algorithm: sha1
+          Issuer Name Hash: F98D75027BB7EA197A8AC78772A946CB9447ABC8
+          Issuer Key Hash: CF4210F1892B522CFD0A6B115D0B2565827DD996
+          Serial Number: 68DD234C238A1164
+OCSP Response Data:
+    OCSP Response Status: successful (0x0)
+    Response Type: Basic OCSP Response
+    Version: 1 (0x0)
+    Responder Id: C = ES, ST = VI, O = FISS, OU = Seguridad, CN = SecuID
+    Produced At: Mar  8 18:27:09 2016 GMT
+    Responses:
+    Certificate ID:
+      Hash Algorithm: sha1
+      Issuer Name Hash: F98D75027BB7EA197A8AC78772A946CB9447ABC8
+      Issuer Key Hash: CF4210F1892B522CFD0A6B115D0B2565827DD996
+      Serial Number: 68DD234C238A1164
+    Cert Status: revoked
+    Revocation Time: Mar  8 18:26:48 2016 GMT
+    Revocation Reason: keyCompromise (0x1)
+    This Update: Mar  8 18:27:09 2016 GMT
+
+    Signature Algorithm: sha256WithRSAEncryption
+         8e:dc:fa:93:23:27:d6:53:8a:02:f8:27:e0:bc:3a:53:1a:55:
+         e3:7b:c1:52:e6:98:23:bb:4f:02:44:99:e8:59:de:12:6e:e7:
+         93:7b:18:21:95:0e:fa:3d:b4:c0:4d:a9:9e:6e:9d:0c:a8:9e:
+         36:f8:49:81:88:db:27:8c:66:02:c8:13:39:44:69:bf:86:5d:
+         17:5d:ed:8e:22:83:ed:df:38:b2:46:15:dc:1d:6a:4e:02:29:
+         10:0d:1d:49:92:f6:b8:5b:29:fe:2c:ff:3c:ad:d7:b3:52:4c:
+         7d:3b:e8:66:12:cf:6c:5c:42:fa:b9:75:1b:ac:1d:d5:17:e5:
+         ed:24:49:c7:77:35:15:62:ac:8c:0d:1e:3c:a5:2a:7e:ac:d1:
+         9e:de:63:83:39:1a:89:b8:06:0d:da:92:b2:32:86:74:2c:dc:
+         f3:09:9a:eb:e0:2c:29:00:a8:e6:dd:95:d4:2b:99:77:ce:fa:
+         d2:40:36:7a:53:02:1c:3c:cc:84:81:b8:34:e9:38:1c:6d:f5:
+         b3:31:37:ac:21:7b:85:04:0a:06:4c:44:30:ce:80:27:28:d0:
+         0c:9f:f8:7c:cd:ad:85:14:2f:58:db:5c:72:fc:ff:aa:b0:11:
+         c8:ae:2d:1b:67:ec:21:c3:3a:7e:5b:3f:13:06:d3:11:a5:9f:
+         da:ae:bc:88
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 7556234559718297945 (0x68dd234c238a1159)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=ES, ST=VI, O=FISS, OU=Seguridad, CN=SecuID
+        Validity
+            Not Before: Mar  7 17:19:07 2016 GMT
+            Not After : Mar  7 17:19:07 2017 GMT
+        Subject: C=ES, ST=VI, O=FISS, OU=Seguridad, CN=SecuID
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c0:80:a2:fc:38:f5:4c:85:e2:08:ef:1d:27:ec:
+                    50:6d:9a:36:c4:94:78:f3:e7:5a:25:bb:02:c3:7a:
+                    e8:b1:e9:6f:4e:3b:a2:93:8e:5b:82:35:73:09:d3:
+                    33:89:3c:61:a6:47:5d:d4:fb:ad:a0:8f:d6:de:ff:
+                    0f:ad:fe:b4:23:49:a7:0d:48:64:11:81:87:15:ad:
+                    bf:2d:e9:b8:1d:fd:a9:51:6a:a3:00:8d:a4:d0:0d:
+                    5a:ff:aa:41:0d:5b:e4:6f:d8:fb:44:d1:c6:13:3e:
+                    6b:ee:50:e0:32:0b:7c:e0:86:9f:7c:ee:4e:39:f4:
+                    6c:bb:e3:b3:de:ec:4a:be:7f:b2:5f:a9:37:a2:2a:
+                    41:ee:8b:a3:58:46:a4:e5:f1:a3:55:e2:76:c5:d5:
+                    af:1e:69:04:6b:50:b1:4c:2f:a8:e3:7b:75:59:f1:
+                    31:4b:9e:c5:ab:53:56:3b:f0:7f:0e:75:16:d7:7d:
+                    51:d5:0a:fe:de:a7:81:d0:38:21:f3:5a:25:19:3d:
+                    9c:f5:14:8d:d0:39:61:a3:7b:2b:cf:23:b4:6d:05:
+                    10:71:fd:39:b5:82:5d:df:0e:a5:79:66:02:9e:4a:
+                    8c:26:0b:dd:0b:1a:a7:cf:f0:6e:03:d7:ce:83:28:
+                    87:f7:69:d7:37:8e:43:1c:a1:87:2b:ba:90:da:4a:
+                    d8:5b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:CF:42:10:F1:89:2B:52:2C:FD:0A:6B:11:5D:0B:25:65:82:7D:D9:96
+
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                OCSP Signing
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Subject Key Identifier: 
+                B2:2C:5A:77:33:81:B7:F6:E4:AC:47:D7:55:0C:64:D3:62:15:B8:D6
+    Signature Algorithm: sha256WithRSAEncryption
+         06:91:1c:95:9f:1c:6f:02:cf:9d:50:75:e2:3d:66:f7:0d:bf:
+         99:ed:00:db:e4:69:e5:cc:a9:22:23:bf:45:55:77:a4:71:38:
+         ac:0f:18:4b:7c:9e:b1:18:86:1f:42:b5:4c:5a:52:8c:44:50:
+         8d:e7:8e:d8:81:16:7f:7e:e4:51:85:90:b6:b6:6a:dc:1a:69:
+         c8:7d:25:c1:6b:db:0a:6e:2d:fe:ba:51:05:7e:95:74:c7:ae:
+         fe:65:fa:16:6d:67:23:bf:24:ab:60:f8:03:75:1d:74:ef:28:
+         f6:d8:ff:02:8b:ea:2f:70:09:4e:88:45:52:47:ef:b5:50:c7:
+         b4:cd:e2:c3:07:47:5c:53:93:47:91:79:77:01:4e:1a:cf:11:
+         7d:e4:cb:11:85:6d:40:72:fe:87:c9:d2:a3:a4:44:2c:18:80:
+         98:2a:b9:c3:85:59:7d:c9:d8:d7:39:56:62:94:f1:de:bc:f9:
+         91:33:b4:72:5a:a9:b1:fb:56:86:df:5d:b4:c9:d5:74:7d:12:
+         65:19:b7:42:df:2d:c0:7d:89:e3:b0:be:93:ce:c7:d0:9c:1c:
+         f8:57:6f:38:b3:7e:d5:6d:d7:b6:33:d3:a8:8d:2c:ea:65:06:
+         9e:8c:28:1d:44:62:7c:59:33:91:e9:ef:d7:2a:50:81:02:0f:
+         da:34:cf:53
+-----BEGIN CERTIFICATE-----
+MIIDkzCCAnugAwIBAgIIaN0jTCOKEVkwDQYJKoZIhvcNAQELBQAwTjELMAkGA1UE
+BhMCRVMxCzAJBgNVBAgMAlZJMQ0wCwYDVQQKDARGSVNTMRIwEAYDVQQLDAlTZWd1
+cmlkYWQxDzANBgNVBAMMBlNlY3VJRDAeFw0xNjAzMDcxNzE5MDdaFw0xNzAzMDcx
+NzE5MDdaME4xCzAJBgNVBAYTAkVTMQswCQYDVQQIDAJWSTENMAsGA1UECgwERklT
+UzESMBAGA1UECwwJU2VndXJpZGFkMQ8wDQYDVQQDDAZTZWN1SUQwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDAgKL8OPVMheII7x0n7FBtmjbElHjz51ol
+uwLDeuix6W9OO6KTjluCNXMJ0zOJPGGmR13U+62gj9be/w+t/rQjSacNSGQRgYcV
+rb8t6bgd/alRaqMAjaTQDVr/qkENW+Rv2PtE0cYTPmvuUOAyC3zghp987k459Gy7
+47Pe7Eq+f7JfqTeiKkHui6NYRqTl8aNV4nbF1a8eaQRrULFML6jje3VZ8TFLnsWr
+U1Y78H8OdRbXfVHVCv7ep4HQOCHzWiUZPZz1FI3QOWGjeyvPI7RtBRBx/Tm1gl3f
+DqV5ZgKeSowmC90LGqfP8G4D186DKIf3adc3jkMcoYcrupDaSthbAgMBAAGjdTBz
+MB8GA1UdIwQYMBaAFM9CEPGJK1Is/QprEV0LJWWCfdmWMAwGA1UdEwEB/wQCMAAw
+EwYDVR0lBAwwCgYIKwYBBQUHAwkwDgYDVR0PAQH/BAQDAgeAMB0GA1UdDgQWBBSy
+LFp3M4G39uSsR9dVDGTTYhW41jANBgkqhkiG9w0BAQsFAAOCAQEABpEclZ8cbwLP
+nVB14j1m9w2/me0A2+Rp5cypIiO/RVV3pHE4rA8YS3yesRiGH0K1TFpSjERQjeeO
+2IEWf37kUYWQtrZq3BppyH0lwWvbCm4t/rpRBX6VdMeu/mX6Fm1nI78kq2D4A3Ud
+dO8o9tj/AovqL3AJTohFUkfvtVDHtM3iwwdHXFOTR5F5dwFOGs8RfeTLEYVtQHL+
+h8nSo6RELBiAmCq5w4VZfcnY1zlWYpTx3rz5kTO0clqpsftWht9dtMnVdH0SZRm3
+Qt8twH2J47C+k87H0Jwc+FdvOLN+1W3XtjPTqI0s6mUGnowoHURifFkzkenv1ypQ
+gQIP2jTPUw==
+-----END CERTIFICATE-----
+OCSP Request Data:
+    Version: 1 (0x0)
+    Requestor List:
+        Certificate ID:
+          Hash Algorithm: sha1
+          Issuer Name Hash: F98D75027BB7EA197A8AC78772A946CB9447ABC8
+          Issuer Key Hash: CF4210F1892B522CFD0A6B115D0B2565827DD996
+          Serial Number: 68DD234C238A1164
+OCSP Response Data:
+    OCSP Response Status: successful (0x0)
+    Response Type: Basic OCSP Response
+    Version: 1 (0x0)
+    Responder Id: C = ES, ST = VI, O = FISS, OU = Seguridad, CN = SecuID
+    Produced At: Mar  8 19:43:29 2016 GMT
+    Responses:
+    Certificate ID:
+      Hash Algorithm: sha1
+      Issuer Name Hash: F98D75027BB7EA197A8AC78772A946CB9447ABC8
+      Issuer Key Hash: CF4210F1892B522CFD0A6B115D0B2565827DD996
+      Serial Number: 68DD234C238A1164
+    Cert Status: revoked
+    Revocation Time: Mar  8 18:26:48 2016 GMT
+    Revocation Reason: keyCompromise (0x1)
+    This Update: Mar  8 19:43:29 2016 GMT
+
+    Signature Algorithm: sha256WithRSAEncryption
+         3b:6a:be:51:b1:82:67:2e:b5:47:e5:e0:b8:32:d4:e1:64:67:
+         5f:39:2a:70:2a:be:99:47:01:e2:25:25:13:0b:24:57:ca:b7:
+         b3:62:07:99:24:27:17:8b:9a:a7:08:08:ac:4b:db:13:c0:70:
+         70:cf:df:a7:e3:63:e6:23:18:98:d8:43:df:32:4c:f4:79:02:
+         4c:72:18:34:04:dd:a1:65:f7:4c:01:c7:da:be:6f:be:f7:48:
+         d1:c8:35:d6:87:95:24:c7:ba:8d:c2:39:52:ae:ec:16:11:6e:
+         ab:29:0d:28:19:f7:c4:ea:ab:5c:fc:c0:5a:01:1a:10:4e:ee:
+         b4:62:e7:62:69:ad:1b:98:10:ee:b0:71:de:66:b7:19:89:3e:
+         7b:e5:26:52:02:14:45:6e:df:80:38:a5:cd:9f:92:49:9b:57:
+         13:fe:cf:7f:51:be:6f:df:e4:5d:5e:64:7c:2f:57:0a:a0:fa:
+         13:78:a6:42:86:15:e3:13:07:d5:3b:49:64:ee:6f:9b:95:86:
+         bd:80:15:61:72:82:9b:dd:b0:a1:cb:fc:79:3b:db:ac:46:2e:
+         eb:9e:19:fe:40:e2:c0:1a:df:23:39:35:d8:bf:0a:c1:ff:ba:
+         e6:0d:19:07:78:0e:86:4c:e2:ab:4b:15:1f:51:c8:5a:9b:ee:
+         50:8a:ed:f0
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 7556234559718297945 (0x68dd234c238a1159)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=ES, ST=VI, O=FISS, OU=Seguridad, CN=SecuID
+        Validity
+            Not Before: Mar  7 17:19:07 2016 GMT
+            Not After : Mar  7 17:19:07 2017 GMT
+        Subject: C=ES, ST=VI, O=FISS, OU=Seguridad, CN=SecuID
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c0:80:a2:fc:38:f5:4c:85:e2:08:ef:1d:27:ec:
+                    50:6d:9a:36:c4:94:78:f3:e7:5a:25:bb:02:c3:7a:
+                    e8:b1:e9:6f:4e:3b:a2:93:8e:5b:82:35:73:09:d3:
+                    33:89:3c:61:a6:47:5d:d4:fb:ad:a0:8f:d6:de:ff:
+                    0f:ad:fe:b4:23:49:a7:0d:48:64:11:81:87:15:ad:
+                    bf:2d:e9:b8:1d:fd:a9:51:6a:a3:00:8d:a4:d0:0d:
+                    5a:ff:aa:41:0d:5b:e4:6f:d8:fb:44:d1:c6:13:3e:
+                    6b:ee:50:e0:32:0b:7c:e0:86:9f:7c:ee:4e:39:f4:
+                    6c:bb:e3:b3:de:ec:4a:be:7f:b2:5f:a9:37:a2:2a:
+                    41:ee:8b:a3:58:46:a4:e5:f1:a3:55:e2:76:c5:d5:
+                    af:1e:69:04:6b:50:b1:4c:2f:a8:e3:7b:75:59:f1:
+                    31:4b:9e:c5:ab:53:56:3b:f0:7f:0e:75:16:d7:7d:
+                    51:d5:0a:fe:de:a7:81:d0:38:21:f3:5a:25:19:3d:
+                    9c:f5:14:8d:d0:39:61:a3:7b:2b:cf:23:b4:6d:05:
+                    10:71:fd:39:b5:82:5d:df:0e:a5:79:66:02:9e:4a:
+                    8c:26:0b:dd:0b:1a:a7:cf:f0:6e:03:d7:ce:83:28:
+                    87:f7:69:d7:37:8e:43:1c:a1:87:2b:ba:90:da:4a:
+                    d8:5b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:CF:42:10:F1:89:2B:52:2C:FD:0A:6B:11:5D:0B:25:65:82:7D:D9:96
+
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Extended Key Usage: 
+                OCSP Signing
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Subject Key Identifier: 
+                B2:2C:5A:77:33:81:B7:F6:E4:AC:47:D7:55:0C:64:D3:62:15:B8:D6
+    Signature Algorithm: sha256WithRSAEncryption
+         06:91:1c:95:9f:1c:6f:02:cf:9d:50:75:e2:3d:66:f7:0d:bf:
+         99:ed:00:db:e4:69:e5:cc:a9:22:23:bf:45:55:77:a4:71:38:
+         ac:0f:18:4b:7c:9e:b1:18:86:1f:42:b5:4c:5a:52:8c:44:50:
+         8d:e7:8e:d8:81:16:7f:7e:e4:51:85:90:b6:b6:6a:dc:1a:69:
+         c8:7d:25:c1:6b:db:0a:6e:2d:fe:ba:51:05:7e:95:74:c7:ae:
+         fe:65:fa:16:6d:67:23:bf:24:ab:60:f8:03:75:1d:74:ef:28:
+         f6:d8:ff:02:8b:ea:2f:70:09:4e:88:45:52:47:ef:b5:50:c7:
+         b4:cd:e2:c3:07:47:5c:53:93:47:91:79:77:01:4e:1a:cf:11:
+         7d:e4:cb:11:85:6d:40:72:fe:87:c9:d2:a3:a4:44:2c:18:80:
+         98:2a:b9:c3:85:59:7d:c9:d8:d7:39:56:62:94:f1:de:bc:f9:
+         91:33:b4:72:5a:a9:b1:fb:56:86:df:5d:b4:c9:d5:74:7d:12:
+         65:19:b7:42:df:2d:c0:7d:89:e3:b0:be:93:ce:c7:d0:9c:1c:
+         f8:57:6f:38:b3:7e:d5:6d:d7:b6:33:d3:a8:8d:2c:ea:65:06:
+         9e:8c:28:1d:44:62:7c:59:33:91:e9:ef:d7:2a:50:81:02:0f:
+         da:34:cf:53
+-----BEGIN CERTIFICATE-----
+MIIDkzCCAnugAwIBAgIIaN0jTCOKEVkwDQYJKoZIhvcNAQELBQAwTjELMAkGA1UE
+BhMCRVMxCzAJBgNVBAgMAlZJMQ0wCwYDVQQKDARGSVNTMRIwEAYDVQQLDAlTZWd1
+cmlkYWQxDzANBgNVBAMMBlNlY3VJRDAeFw0xNjAzMDcxNzE5MDdaFw0xNzAzMDcx
+NzE5MDdaME4xCzAJBgNVBAYTAkVTMQswCQYDVQQIDAJWSTENMAsGA1UECgwERklT
+UzESMBAGA1UECwwJU2VndXJpZGFkMQ8wDQYDVQQDDAZTZWN1SUQwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDAgKL8OPVMheII7x0n7FBtmjbElHjz51ol
+uwLDeuix6W9OO6KTjluCNXMJ0zOJPGGmR13U+62gj9be/w+t/rQjSacNSGQRgYcV
+rb8t6bgd/alRaqMAjaTQDVr/qkENW+Rv2PtE0cYTPmvuUOAyC3zghp987k459Gy7
+47Pe7Eq+f7JfqTeiKkHui6NYRqTl8aNV4nbF1a8eaQRrULFML6jje3VZ8TFLnsWr
+U1Y78H8OdRbXfVHVCv7ep4HQOCHzWiUZPZz1FI3QOWGjeyvPI7RtBRBx/Tm1gl3f
+DqV5ZgKeSowmC90LGqfP8G4D186DKIf3adc3jkMcoYcrupDaSthbAgMBAAGjdTBz
+MB8GA1UdIwQYMBaAFM9CEPGJK1Is/QprEV0LJWWCfdmWMAwGA1UdEwEB/wQCMAAw
+EwYDVR0lBAwwCgYIKwYBBQUHAwkwDgYDVR0PAQH/BAQDAgeAMB0GA1UdDgQWBBSy
+LFp3M4G39uSsR9dVDGTTYhW41jANBgkqhkiG9w0BAQsFAAOCAQEABpEclZ8cbwLP
+nVB14j1m9w2/me0A2+Rp5cypIiO/RVV3pHE4rA8YS3yesRiGH0K1TFpSjERQjeeO
+2IEWf37kUYWQtrZq3BppyH0lwWvbCm4t/rpRBX6VdMeu/mX6Fm1nI78kq2D4A3Ud
+dO8o9tj/AovqL3AJTohFUkfvtVDHtM3iwwdHXFOTR5F5dwFOGs8RfeTLEYVtQHL+
+h8nSo6RELBiAmCq5w4VZfcnY1zlWYpTx3rz5kTO0clqpsftWht9dtMnVdH0SZRm3
+Qt8twH2J47C+k87H0Jwc+FdvOLN+1W3XtjPTqI0s6mUGnowoHURifFkzkenv1ypQ
+gQIP2jTPUw==
+-----END CERTIFICATE-----
+OCSP Request Data:
+    Version: 1 (0x0)
+    Requestor List:
+        Certificate ID:
+          Hash Algorithm: sha1
+          Issuer Name Hash: F98D75027BB7EA197A8AC78772A946CB9447ABC8
+          Issuer Key Hash: CF4210F1892B522CFD0A6B115D0B2565827DD996
+          Serial Number: 68DD234C238A1164
+OCSP Response Data:
+    OCSP Response Status: successful (0x0)
+    Response Type: Basic OCSP Response
+    Version: 1 (0x0)
+    Responder Id: C = ES, ST = VI, O = FISS, OU = Seguridad, CN = SecuID
+    Produced At: Mar  8 19:49:20 2016 GMT
+    Responses:
+    Certificate ID:
+      Hash Algorithm: sha1
+      Issuer Name Hash: F98D75027BB7EA197A8AC78772A946CB9447ABC8
+      Issuer Key Hash: CF4210F1892B522CFD0A6B115D0B2565827DD996
+      Serial Number: 68DD234C238A1164
+    Cert Status: revoked
+    Revocation Time: Mar  8 18:26:48 2016 GMT
+    Revocation Reason: keyCompromise (0x1)
+    This Update: Mar  8 19:49:20 2016 GMT
+
+    Signature Algorithm: sha256WithRSAEncryption
+         a0:e7:85:a3:a2:65:60:cb:19:89:46:77:88:cb:97:89:f3:09:
+         7a:88:ea:f3:62:98:e2:5d:48:ee:0a:3f:36:d5:1a:61:6c:18:
+         d1:c1:b3:eb:f6:54:ff:9a:79:af:c9:25:dc:50:38:7e:31:5a:
+         f7:c1:79:9d:d6:a7:85:21:22:ae:ab:6a:1f:e4:2a:b5:09:fd:
+         94:e6:e5:84:21:24:27:d7:b0:6d:3a:b4:e7:b8:4f:7e:cb:f0:
+         a0:66:5d:de:26:09:d2:48:45:aa:4f:b5:1f:34:68:29:8f:e2:
+         4a:ef:bb:47:20:2b:5f:ff:21:2b:fa:4e:1b:ce:35:3e:30:73:
+         1a:15:f3:6a:79:bc:15:8d:1f:ef:79:c2:67:d4:c1:22:0e:01:
+         77:c5:25:d0:29:fc:b7:66:fd:1e:67:0a:19:26:5a:6b:59:07:
+         04:5f:f4:28:00:3b:5b:47:ea:7b:f3:41:73:a4:01:bd:45:f8:
+         24:e8:81:96:60:a2:b4:1a:71:2d:7c:7a:04:67:7d:2d:3b:92:
+         69:a2:8b:cf:2e:2e:d8:ba:95:0e:a0:a8:f6:b4:c0:13:d9:ac:
+         62:54:33:84:43:04:e7:8d:2f:10:96:3e:3e:c6:81:85:da:56:
+         c3:b3:a4:07:8e:f4:12:4f:c9:81:19:ef:fc:87:d1:b0:34:b6:
+         78:59:fc:15
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 7556234559718297945 (0x68dd234c238a1159)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=ES, ST=VI, O=FISS, OU=Seguridad, CN=SecuID
+        Validity
+            Not Before: Mar  7 17:19:07 2016 GMT
+            Not After : Mar  7 17:19:07 2017 GMT
+        Subject: C=ES, ST=VI, O=FISS, OU=Seguridad, CN=SecuID
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c0:80:a2:fc:38:f5:4c:85:e2:08:ef:1d:27:ec:
+                    50:6d:9a:36:c4:94:78:f3:e7:5a:25:bb:02:c3:7a:
+                    e8:b1:e9:6f:4e:3b:a2:93:8e:5b:82:35:73:09:d3:
+                    33:89:3c:61:a6:47:5d:d4:fb:ad:a0:8f:d6:de:ff:
+                    0f:ad:fe:b4:23:49:a7:0d:48:64:11:81:87:15:ad:
+                    bf:2d:e9:b8:1d:fd:a9:51:6a:a3:00:8d:a4:d0:0d:
+                    5a:ff:aa:41:0d:5b:e4:6f:d8:fb:44:d1:c6:13:3e:
+                    6b:ee:50:e0:32:0b:7c:e0:86:9f:7c:ee:4e:39:f4:
+                    6c:bb:e3:b3:de:ec:4a:be:7f:b2:5f:a9:37:a2:2a:
+                    41:ee:8b:a3:58:46:a4:e5:f1:a3:55:e2:76:c5:d5:
+                    af:1e:69:04:6b:50:b1:4c:2f:a8:e3:7b:75:59:f1:
+                    31:4b:9e:c5:ab:53:56:3b:f0:7f:0e:75:16:d7:7d:
+                    51:d5:0a:fe:de:a7:81:d0:38:21:f3:5a:25:19:3d:
+                    9c:f5:14:8d:d0:39:61:a3:7b:2b:cf:23:b4:6d:05:
+                    10:71:fd:39:b5:82:5d:df:0e:a5:79:66:02:9e:4a:
+                    8c:26:0b:dd:0b:1a:a7:cf:f0:6e:03:d7:ce:83:28:
+                    87:f7:69:d7:37:8e:43:1c:a1:87:2b:ba:90:da:4a:
+                    d8:5b
+                Exponent: 65537 (0x10001)
+        X509v3

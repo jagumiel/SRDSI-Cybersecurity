@@ -1,0 +1,101 @@
+### ca_openssl.cnf ###
+[default]
+name          = ca-root
+#name	      =ca-root-selfsigned
+domain_suffix = srdsi.lab
+aia_url       = http://$name.$domain_suffix/$name.crt
+crl_url       = http://$name.$domain_suffix/$name.crl
+ocsp_url      = http://ocsp.$domain_suffix:444
+default_ca    = CA_default   # Sección por defecto para CA
+name_opt      = utf8,esc_ctrl,multiline,lname,align
+
+[ca_dn]
+countryName             = ES
+stateOrProvinceName     = VI
+localityName            = Bilbao
+organizationName        = FISS
+organizationalUnitName  = Seguridad
+commonName              = SecuID
+
+
+[CA_default]
+home             = /root/pki
+db		 = /root/pki/db
+privado          = /root/pki/private
+database         = $db/index.txt          
+serial           = $db/certnum.srl    
+crlnumber        = $db/crlnum.srl
+certificate      = $home/certs/$name.crt             
+private_key      = $privado/$name.key     
+crl		 = /root/pki/certs/$name.crl	  # (DER format)
+RANDFILE         = $privado/.rand         
+new_certs_dir    = $home/certs
+unique_subject   = no
+copy_extensions  = none
+default_days     = 365
+default_crl_days = 30
+default_md       = default                     # sha256
+policy           = policy_c_o_match
+
+# Política para la CA  
+[policy_c_o_match]
+countryName             = match
+stateOrProvinceName     = optional
+organizationName        = match
+organizationalUnitName  = optional
+commonName              = supplied
+emailAddress            = optional
+
+[req]
+default_bits       = 2048                     # 4096
+encrypt_key        = yes
+default_md         = default                  # sha256
+utf8               = yes
+string_mask        = utf8only
+prompt             = no
+distinguished_name = ca_dn
+req_extensions     = ca_ext
+
+
+
+[ca_ext]
+basicConstraints     = critical,CA:true
+keyUsage             = critical,keyCertSign,cRLSign
+subjectKeyIdentifier = hash
+[crl_info]
+URI.0     = $crl_url
+
+[issuer_info]
+caIssuers;URI.0    = $aia_url
+OCSP;URI.0         = $ocsp_url
+
+[name_constraints]
+permitted;DNS.0=srdsi.lab
+permitted;DNS.1=srdsi.labs
+excluded;IP.0=0.0.0.0/0.0.0.0
+excluded;IP.1=0:0:0:0:0:0:0:0/0:0:0:0:0:0:0:0
+
+[ocsp_ext] 
+authorityKeyIdentifier  = keyid:always
+basicConstraints        = critical,CA:false
+extendedKeyUsage        = OCSPSigning
+keyUsage                = critical,digitalSignature
+subjectKeyIdentifier    = hash
+
+[server_ext] 
+authorityInfoAccess     = @issuer_info
+authorityKeyIdentifier  = keyid:always
+basicConstraints        = critical,CA:false
+crlDistributionPoints   = @crl_info
+extendedKeyUsage        = clientAuth,serverAuth
+keyUsage                = critical,digitalSignature,keyEncipherment
+subjectKeyIdentifier    = hash
+
+[client_ext] 
+authorityInfoAccess     = @issuer_info
+authorityKeyIdentifier  = keyid:always
+basicConstraints        = critical,CA:false
+crlDistributionPoints   = @crl_info
+extendedKeyUsage        = clientAuth
+keyUsage                = critical,digitalSignature
+subjectKeyIdentifier    = hash
