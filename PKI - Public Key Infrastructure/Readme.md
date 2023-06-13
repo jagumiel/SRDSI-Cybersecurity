@@ -135,7 +135,7 @@ To generate the key and certificate for an OCSP (Online Certificate Status Proto
     The openssl req command is used to generate a new key pair and certificate signing request (CSR) for the OCSP server. Here's an explanation of the options used in the command:
 4. Follow the prompts to provide the necessary information for the OCSP server certificate, such as the Common Name (CN) and other details.
 5. Sign the OCSP server certificate using the PKI's private key. Assuming the PKI's private key is private/ca-root.key, use the following command:
-        ```sh
+    ```sh
     sudo openssl ca -in certs/certificado-ca-ocsp.csr -out certs/certificado-ca-ocsp.crt -config ca_openssl.cnf -extensions ocsp_ext
     ```
 6. Review the generated OCSP server certificate (certs/certificado-ca-ocsp.crt) and the corresponding private key (private/clave-privada-ca-ocsp.key) in their respective folders.
@@ -145,3 +145,62 @@ To generate the key and certificate for an OCSP (Online Certificate Status Proto
 ## Using the PKI
 
 Great! Now we have the PKI working. As the PKI infrastructure is set up and operational, various operations can be performed to leverage its capabilities. This section will guide you through the essential tasks of issuing certificates, revoking certificates, validating certificates via an OCSP responder, and exporting certificates and private keys. By following these instructions, you'll be able to effectively utilize the PKI to establish trust, enable secure communication, and ensure the integrity of digital assets within your environment.
+
+### Issuing a Certificate
+When issuing a certificate within a PKI, it is common practice to request a certificate with the same name as the CA (Certificate Authority). This naming convention ensures consistency and clarity within the PKI hierarchy. By having the CA's name as the subject of the issued certificate, it clearly indicates that the certificate has been issued by the trusted CA and helps establish trust in the certificate's authenticity.
+
+To create a new certificate and sign it using the CA's private key, the next steps were followed:
+1. Generate a new key pair and certificate signing request (CSR) for "user3" using the following command:
+    ```sh
+    openssl req -new -nodes -keyout private/user3.key -out certs/user3_request.csr -config ca_openssl.cnf
+    ```
+    This command generates a new private key file (private/user3.key) and a certificate signing request file (certs/user3_request.csr) for "user3" using the configuration file ca_openssl.cnf.
+2. Submit the CSR file (user3_request.csr) to the Certificate Authority (CA) for signing. Transfer the CSR securely to the CA following your organization's established procedures. This step will be not needed in our environment, as we are into the PKI itself.
+3. Once the CA receives the CSR, it can sign the certificate using the CA's private key. Use the following command to sign the certificate:
+     ```sh
+    openssl ca -in certs/user3_request.csr -out certs/user3.crt -config ca_openssl.cnf
+    ```
+    This command reads the CSR file (certs/user3_request.csr), signs it using the CA's private key, and generates the signed certificate file (certs/user3.crt). The CA's configuration file (ca_openssl.cnf) is used to define the certificate signing policies and extensions.
+
+4. The CA may require additional steps, such as verifying the identity of the entity requesting the certificate, conducting a certificate revocation check, or applying additional security measures as per your organization's policies.
+5. Review the signed certificate (certs/user3.crt) in the certs folder. The issued certificate can now be used by "user3" for secure communication and authentication purposes.
+
+### Revoking a Certificate
+Revoking a certificate is an important step in maintaining the integrity and security of a PKI (Public Key Infrastructure). There are several reasons why you might want to revoke a certificate from a user:
+
+1. **Compromised Private Key:** If the user's private key associated with the certificate has been compromised or is suspected to be compromised, it is crucial to revoke the certificate. By revoking the certificate, you ensure that any attempts to use the compromised private key for unauthorized access or fraudulent activities are rendered invalid.
+2. **Employee Departure or Role Change:** When an employee leaves the organization or changes roles, it is often necessary to revoke their certificate to prevent unauthorized access to sensitive systems, data, or resources. Revoking the certificate ensures that the user no longer possesses a valid credential for authentication and secure communication within the organization.
+3. **Certificate Expiration:** Certificates have a defined validity period. When a certificate reaches its expiration date, it is considered invalid. However, it is good practice to formally revoke the expired certificate to maintain an accurate record of its status and prevent any potential misuse or confusion.
+4. **Certificate Policy Violation:** If a user violates the organization's certificate policies or terms of use, their certificate may be revoked as a disciplinary measure or to enforce compliance. Examples of policy violations include unauthorized certificate usage, misuse of privileges, or violations of security policies.
+5. **Suspected or Detected Certificate Tampering:** If there is evidence or suspicion of certificate tampering, such as modifications or alterations, it is necessary to revoke the certificate. Tampering with a certificate compromises its integrity and authenticity, undermining the trustworthiness of the PKI.
+
+By revoking a certificate, you invalidate its status and communicate to relying parties that the certificate should no longer be trusted. This helps ensure that only valid and trusted certificates are used for secure communication, authentication, and access control within the PKI environment. Let's see how this is done on _user3_:
+
+1. Revoke the certificate for "user3" using the following command:
+     ```sh
+    openssl ca -revoke certs/user3.crt -config ca_openssl.cnf
+    ```
+    This command revokes the certificate (certs/user3.crt) for "user3" based on the CA's configuration file (ca_openssl.cnf).
+2. Update the Certificate Revocation List (CRL) to include the revoked certificate. Use the following command:
+     ```sh
+    openssl ca -gencrl -out certs/crl-ca-root.pem -config ca_openssl.cnf
+    ```
+    This command generates an updated CRL file (certs/crl-ca-root.pem) that includes the information about the revoked certificate.
+3. Review the CRL file (pki/certs/crl-ca-root.pem) in the pki/certs folder to ensure that the revoked certificate for "user3" is listed.
+
+> **Important Note:** Distribute the updated CRL to relevant parties, such as relying parties, OCSP responders, or other entities that need to verify the revocation status of certificates issued by the PKI.
+
+### Certificate validation with OCSP responder
+To perform certificate validation using an OCSP (Online Certificate Status Protocol) responder, follow these steps (We will be using 2 different terminals or tabs):
+
+1. Start the OCSP responder using the following command on **Terminal 1**:
+     ```sh
+    openssl ocsp -port 444 -index db/index.txt -CA certs/ca-root.crl -rsigner certs/certificado-ca-ocsp.crt -rkey private/clave-privada-ca-ocsp -text -out log.txt
+    ```
+    This command starts the OCSP responder on port 444. It uses the certificate revocation list (certs/ca-root.crl) and the OCSP responder's certificate (certs/certificado-ca-ocsp.crt) and private key (private/clave-privada-ca-ocsp) for verification. The -text option enables verbose output, and the -out log.txt option redirects the log output to a file.
+2. Open a **Terminal 2** and perform certificate validation using the OCSP responder with the following command:
+     ```sh
+    openssl ocsp -CAfile certs/ca-root.crt -issuer certs/ca-root.crt -url https://127.0.0.1:444 -cert certs/user3.crt -resp_text
+    ```
+    This command performs the certificate validation process. It specifies the CA certificate (certs/ca-root.crt) and the issuer certificate (certs/ca-root.crt) for verification. The -url option sets the URL of the OCSP responder (in this case, https://127.0.0.1:444). The -cert option specifies the certificate to be validated (certs/user3.crt). The -resp_text option displays the response in text format.
+3. The OCSP responder should provide a response indicating the status of the certificate. If the certificate for "user3" was previously revoked, the server should indicate that the certificate has been revoked.
