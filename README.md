@@ -25,3 +25,4 @@ SRDSI stands for "Seguridad, Rendimiento y Disponibilidad en Servicios e Infraes
 ## Notes
 
 - Educational work from a university course; not production-hardened.
+- The PKI lab includes sample keys and certificates; do not reuse them.
